@@ -1,0 +1,76 @@
+body {
+    font-family: "M PLUS Rounded 1c";
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.dragbox {
+    width: 60px;
+    margin: 20px 20px 0 20px;
+}
+
+.dragbox:hover {
+    transform: scale(1.2, 1.2);
+}
+
+#canvas1,
+#canvas2,
+#canvas3 {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin: 5px 0 10px 0;
+}
+
+#panel {
+    margin: auto;
+}
+
+#panel tr, td, th {
+    padding: 2px 5px 2px 5px;
+}
+
+#panel th{
+    font-size: larger;
+}
+
+.label {
+    display: inline-block;
+    width: 15px;
+}
+
+.value {
+    display: inline-block;
+    width: 40px;
+    text-align: right;
+}
+
+#drop-zone {
+    padding: 60px 30px 60px 30px;
+    margin: 50px auto 30px auto;
+    width: 850px;
+    text-align: center;
+    border: solid 1px;
+}
+
+#file-input {
+    display: none;
+}
+
+#reset {
+    transform: scale(1.5, 1.5);
+    margin: 5px 10px 0 0;
+}
+
+#attention {
+    padding-top: 30px;
+    color:red;
+}

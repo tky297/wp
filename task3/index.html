@@ -1,0 +1,102 @@
+<!-- 画像をパーティクルにする、平面を回転させる、球体を回転させる -->
+<!-- パーティクルはp5.js、3d回転はthree.js、アイコンのドラッグ＆ドロップはjqueryを利用した -->
+<!-- 外部から画像をドラッグ＆ドロップするとアイコンを追加できる -->
+<!-- 参考　https://openprocessing.org/sketch/1695582 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>task3</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/redmond/jquery-ui.min.css" rel="stylesheet">
+    <script src="js/setup.js"></script>
+    <script src="js/particle/p5.js"></script>
+    <script src="js/particle/main.js"></script>
+    <script src="js/particle/particle.js"></script>
+    <script src="js/particle/utils.js"></script>
+    <script src="js/3d/Three.js"></script>
+    <script src="js/3d/flatSpin.js"></script>
+    <script src="js/3d/sphereSpin.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="gallery">
+        <img class="dragbox" src="img/facebook.png">
+        <img class="dragbox" src="img/instagram.png">
+        <img class="dragbox" src="img/twitter.png">
+        <img class="dragbox" src="img/line.png">
+        <img class="dragbox" src="img/amazon.png">
+        <img class="dragbox" src="img/mcdonalds.png">
+        <img class="dragbox" src="img/visa.png">
+        <img class="dragbox" src="img/mastercard.png">
+    </div>
+    <p>上のアイコンを黒い領域にドラッグ＆ドロップするとテクスチャを変更できます！<br>外部の画像をドラッグ＆ドロップしてもOK！</p>
+    <br>
+    <div>
+        <table id="panel">
+            <tr>
+                <th>画像をパーティクルに！</th>
+                <th>平面画像を回転！</th>
+                <th>画像を球に貼り付けて回転！</th>
+            </tr>
+            <tr>
+                <td><span id="canvas1" class="canvas"></span></td>
+                <td><span id="canvas2" class="canvas"></span></td>
+                <td><span id="canvas3" class="canvas"></span></td>
+            </tr>
+            <tr>
+                <td><label><input id="reset" type="checkbox" checked>定期的に発散</label></td>
+                <td>
+                    <span class="label">X</span>
+                    <input class="slider" id="x1" type="range" min="-100" max="100" value="0">
+                    <span class="value">0</span>
+                </td>
+                <td>
+                    <span class="label">X</span>
+                    <input class="slider" id="x2" type="range" min="-100" max="100" value="0">
+                    <span class="value">0</span>
+                </td>
+            </tr>
+            <tr>
+                <td>※パーティクルはやや重いです</td>
+                <td>
+                    <span class="label">Y</span>
+                    <input class="slider" id="y1" type="range" min="-100" max="100" value="50">
+                    <span class="value">50</span>
+                </td>
+                <td>
+                    <span class="label">Y</span>
+                    <input class="slider" id="y2" type="range" min="-100" max="100" value="50">
+                    <span class="value">50</span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <span class="label">Z</span>
+                    <input class="slider" id="z1" type="range" min="-100" max="100" value="0">
+                    <span class="value">0</span>
+                </td>
+                <td>
+                    <span class="label">Z</span>
+                    <input class="slider" id="z2" type="range" min="-100" max="100" value="0">
+                    <span class="value">0</span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>※スライダーで回転を制御できます</td>
+                <td>※スライダーで回転を制御できます</td>
+            </tr>
+        </table>
+    </div>
+    <script src="js/app.js"></script>
+    <br><br><br>
+</body>
+
+</html>
